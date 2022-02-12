@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,5 @@ import { Injectable } from '@angular/core';
 })
 export class WeatherService {
 
-  constructor() { }
+  constructor(private http: HttpClientModule) { }
 }
