@@ -9,6 +9,8 @@ import { WeatherService } from '../weather.service';
 })
 export class WeatherComponent implements OnInit {
 
+  weather: Weather | undefined;
+
   constructor() { }
 
   ngOnInit(): void {
