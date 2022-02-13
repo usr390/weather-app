@@ -1,5 +1,6 @@
 <mat-form-field>
 
-    <input matInput placeholder="Enter city">
+    <input matInput placeholder="Enter city" #cityCtrl (keydown.enter)="search(cityCtrl.value)">
 
 </mat-form-field>
+
