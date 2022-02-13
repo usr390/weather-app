@@ -11,7 +11,7 @@ export class WeatherComponent implements OnInit {
 
   weather: Weather | undefined;
 
-  constructor() { }
+  constructor(private weatherService: WeatherService ) { }
 
   ngOnInit(): void {
   }
