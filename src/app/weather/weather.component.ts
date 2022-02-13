@@ -10,15 +10,12 @@ import { WeatherService } from '../weather.service';
 export class WeatherComponent implements OnInit {
 
   weather: Weather | undefined;
-  image = new Map();
+  weatherIcons = new Map();
 
   constructor(private weatherService: WeatherService ) { }
 
   ngOnInit(): void {
-    this.image.set("Clear", "../../assets/clear.png");
-    this.image.set("Clouds", "../../assets/cloudy.png");
-    this.image.set("Rain", "../../assets/rain.png");
-    this.image.set("Snow", "../../assets/snow.png");
+    this.setWeatherIcons();
   }
 
   search(city: string) {
@@ -26,7 +23,14 @@ export class WeatherComponent implements OnInit {
   }
 
   generateImage(condition: string) {
-    return this.image.get(condition);
+    return this.weatherIcons.get(condition);
+  }
+
+  setWeatherIcons() {
+    this.weatherIcons.set("Clear", "../../assets/clear.png");
+    this.weatherIcons.set("Clouds", "../../assets/cloudy.png");
+    this.weatherIcons.set("Rain", "../../assets/rain.png");
+    this.weatherIcons.set("Snow", "../../assets/snow.png");
   }
 
 }
