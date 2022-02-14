@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Work;
+    src: url(../../assets/fonts/Work_Sans/static/WorkSans-Bold.ttf) format('truetype');
+}
+
 :host {
 
     display: flex;
@@ -26,5 +31,10 @@ mat-card {
 h1 {
     text-align: center;
     font-size: 2.5em;
+}
+
+.title {
+    font-family: Work;
+    margin: 20px 0 50px 0;
 }
 
