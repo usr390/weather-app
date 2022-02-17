@@ -18,8 +18,8 @@ export class WeatherComponent implements OnInit {
     this.setWeatherIcons();
   }
 
-  search(city: string) {
-    this.weatherService.getWeather(city).subscribe(weather => this.weather = weather);
+  search(searchQuery: string) {
+    this.weatherService.getWeather(searchQuery).subscribe(weather => this.weather = weather);
   }
 
   generateImage(condition: string) {
