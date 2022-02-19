@@ -4,18 +4,14 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 import { Weather } from './weather';
+import { PlacesApiResponse } from './places-api-response';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherService {
 
-
-  private jsonresponse: string = 'test';
-  private state: string = '';
-  private city: string = '';
-  private coord1: number = 0;
-  private coord2: number = 0;
+  placesApiResponse: PlacesApiResponse | undefined;
 
   constructor(private http: HttpClient) { }
 
